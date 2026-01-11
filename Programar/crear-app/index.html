@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>Crear Nueva App - DevCenter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <button class="back-btn" id="backBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Volver
+      </button>
+      <div class="header-title">
+        <div class="logo-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v6m0 6v6m10-11h-6m-6 0H1"/>
+          </svg>
+        </div>
+        <h1>Crear Nueva App</h1>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="create-card">
+        <div class="card-header">
+          <div class="step-indicator">
+            <div class="step active" data-step="1">1</div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2">2</div>
+            <div class="step-line"></div>
+            <div class="step" data-step="3">3</div>
+          </div>
+          <h2 class="card-title">Describe tu idea</h2>
+          <p class="card-subtitle">Cuéntanos qué tipo de aplicación quieres crear</p>
+        </div>
+
+        <div class="card-body">
+          <div class="input-group">
+            <label for="appName">Nombre de la App</label>
+            <input type="text" id="appName" placeholder="Mi App Increíble" maxlength="30">
+            <span class="char-count"><span id="nameCount">0</span>/30</span>
+          </div>
+
+          <div class="input-group">
+            <label for="appDescription">Descripcion</label>
+            <textarea id="appDescription" placeholder="Describe tu idea..." rows="4" maxlength="250"></textarea>
+            <span class="char-count"><span id="descCount">0</span>/250</span>
+          </div>
+
+          <div class="input-group">
+            <label>Iniciales (2 caracteres)</label>
+            <div class="initials-wrapper">
+              <input type="text" id="appInitials" placeholder="AB" maxlength="2" class="initials-input">
+              <div class="initials-preview" id="initialsPreview">??</div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Tags <span class="tag-counter">(<span id="tagCount">0</span>/10)</span></label>
+            <div class="tags-container">
+              <div class="tags-list" id="tagsList"></div>
+              <div class="tag-input-wrapper">
+                <input type="text" id="tagInput" placeholder="Escribe un tag y presiona Enter" class="tag-input" maxlength="10">
+                <button type="button" class="enter-hint-btn" id="enterHintBtn">
+                  Enter
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Status</label>
+            <div class="status-config">
+              <input type="text" id="statusName" placeholder="Free, Premium..." class="status-name-input" maxlength="10">
+              <div class="color-picker-wrapper">
+                <label class="color-label">Color:</label>
+                <div class="color-options">
+                  <button class="color-option active" data-color="#22c55e" style="background: #22c55e;"></button>
+                  <button class="color-option" data-color="#3b82f6" style="background: #3b82f6;"></button>
+                  <button class="color-option" data-color="#f59e0b" style="background: #f59e0b;"></button>
+                  <button class="color-option" data-color="#ef4444" style="background: #ef4444;"></button>
+                  <button class="color-option" data-color="#8b5cf6" style="background: #8b5cf6;"></button>
+                  <button class="color-option" data-color="#ec4899" style="background: #ec4899;"></button>
+                </div>
+              </div>
+              <div class="status-preview" id="statusPreview">
+                <span class="status-badge" id="statusBadge">Status</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <button class="btn-primary" id="createBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            Finalizar de crear
+          </button>
+        </div>
+      </div>
+
+      <div class="templates-section">
+        <h3>Plantillas Populares</h3>
+        <div class="templates-grid">
+          <div class="template-card">
+            <div class="template-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <span>Landing Page</span>
+          </div>
+          <div class="template-card">
+            <div class="template-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <span>Dashboard</span>
+          </div>
+          <div class="template-card">
+            <div class="template-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </div>
+            <span>E-commerce</span>
+          </div>
+          <div class="template-card">
+            <div class="template-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <span>Chat App</span>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../keys.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
