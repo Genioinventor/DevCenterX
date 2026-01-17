@@ -1,0 +1,48 @@
+==========================================
+ESTRUCTURA DE BASE DE DATOS - SUPABASE
+Proyecto: sgqnjgfkycfzsrtwzdfq
+==========================================
+
+URL: https://sgqnjgfkycfzsrtwzdfq.supabase.co
+
+==========================================
+TABLA: cuentas
+==========================================
+Almacena datos de autenticación de usuarios
+
+Campos:
+- id          : uuid (PRIMARY KEY, auto-generado)
+- usuario     : text (nombre de usuario único)
+- email       : text (correo electrónico)
+- contrasena  : text (contraseña hasheada)
+- avatar      : text (URL o identificador del avatar)
+- datos       : jsonb (datos adicionales del usuario)
+- creado_en   : timestamp (fecha de creación)
+
+==========================================
+TABLA: personas
+==========================================
+Almacena perfil y proyectos de cada usuario
+
+Campos:
+- id            : uuid (PRIMARY KEY, auto-generado)
+- nombrepersona : text (nombre de la persona/usuario)
+- created_at    : timestamp (fecha de creación)
+- limite        : integer (límite de proyectos)
+- status        : integer (estado del usuario)
+- proyectos     : jsonb (array de proyectos del usuario)
+
+==========================================
+TABLA: proyectos_publicos
+==========================================
+Almacena estadísticas de proyectos publicados
+
+Campos:
+- id              : uuid (PRIMARY KEY, auto-generado)
+- nombre_proyecto : text (nombre del proyecto)
+- megustas        : integer (contador de likes)
+- vistas          : integer (contador de visitas)
+- comentario      : text (comentarios)
+- created_at      : timestamp (fecha de creación)
+
+==========================================
